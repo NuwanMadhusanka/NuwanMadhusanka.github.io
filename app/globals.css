@@ -1,0 +1,505 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Base — mirrors the reference <head> styles exactly
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+body {
+  margin: 0;
+  background: #080b10;
+  color: #e6eaf0;
+  font-family: var(--font-figtree), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: #8ab4f8;
+  text-decoration: none;
+}
+a:hover {
+  color: #b9d2fb;
+}
+::selection {
+  background: rgba(138, 180, 248, 0.28);
+}
+:focus-visible {
+  outline: 2px solid #8ab4f8;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Carousel: hidden scrollbar */
+[data-carousel]::-webkit-scrollbar {
+  display: none;
+}
+
+/* Entrance / motion */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+[data-rise] {
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-rise] {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+.container-1180 {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section {
+  padding: clamp(52px, 7vw, 76px) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+.h1 {
+  margin: 0 0 22px;
+  font-size: clamp(30px, 3.9vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.h2 {
+  margin: 0;
+  font-size: clamp(26px, 3.2vw, 38px);
+  line-height: 1.16;
+  letter-spacing: -0.028em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+.grad-text {
+  background: linear-gradient(100deg, #8ab4f8, #7dd3c0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.lead {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #9aa6b8;
+  text-wrap: pretty;
+}
+
+/* ============================================================
+   Section header
+   ============================================================ */
+.sec-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.sec-badge {
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.sec-badge-outline {
+  background: rgba(125, 211, 192, 0.08);
+  color: #7dd3c0;
+  border: 1px solid rgba(125, 211, 192, 0.3);
+}
+.sec-label {
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.sec-rule {
+  flex: 1;
+  height: 1px;
+  min-width: 24px;
+}
+.sec-head-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 20px 56px;
+  align-items: end;
+  margin-bottom: 32px;
+}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(19, 26, 35, 0.55);
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.card-hover:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.85);
+}
+.cap-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-snap-align: start;
+  min-width: 0;
+}
+.card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+}
+.card-body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.62;
+  color: #9aa6b8;
+  text-wrap: pretty;
+}
+.evidence {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  color: #8d99ab;
+}
+
+/* Pillar cards */
+.pillar-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 16px;
+  padding: 28px;
+  color: #e6eaf0;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.pillar-card:hover {
+  border-color: rgba(255, 255, 255, 0.24);
+  transform: translateY(-3px);
+  box-shadow: 0 22px 44px -26px rgba(0, 0, 0, 0.9);
+  color: #e6eaf0;
+}
+
+/* ============================================================
+   Chips / tech tags
+   ============================================================ */
+.tech-tag {
+  font-family: var(--font-ibm-plex-mono), monospace;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.03);
+  color: #9aa6b8;
+}
+.tech-tag-sm {
+  font-size: 10.5px;
+  padding: 4px 9px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.025);
+  color: #9aa6b8;
+  font-family: var(--font-ibm-plex-mono), monospace;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 13px 24px;
+  border-radius: 10px;
+  background: #e6eaf0;
+  color: #0a0e13;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -12px rgba(230, 234, 240, 0.5);
+  color: #0a0e13;
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 13px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #e6eaf0;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.26);
+  color: #e6eaf0;
+}
+
+/* ============================================================
+   Links
+   ============================================================ */
+.nav-link {
+  color: #9aa6b8;
+  padding: 6px 0;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #e6eaf0;
+}
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(138, 180, 248, 0.35);
+  color: #b9d2fb;
+  background: rgba(138, 180, 248, 0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.contact-pill:hover {
+  background: rgba(138, 180, 248, 0.16);
+  color: #dce9fe;
+}
+.mono-link {
+  color: #8d99ab;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.mono-link:hover {
+  color: #e6eaf0;
+  border-color: #8ab4f8;
+}
+.subtle-link {
+  color: #9aa6b8;
+  transition: color 0.2s;
+}
+.subtle-link:hover {
+  color: #e6eaf0;
+}
+
+/* ============================================================
+   Grid texture (hero card, delivery path, contact)
+   ============================================================ */
+.grid-texture {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.024) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
+  background-size: 38px 38px;
+  pointer-events: none;
+}
+
+/* ============================================================
+   Carousel
+   ============================================================ */
+.carousel {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior-x: contain;
+  padding: 4px 0 6px;
+}
+.dot-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dot {
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  transition: width 0.25s, background 0.25s;
+}
+.car-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: background 0.2s, border-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================================
+   Project / article cards & case study
+   ============================================================ */
+/* Responsive grid used for sub-section card groups (sections 05 & 09). */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+@media (max-width: 560px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.media-box {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: #0b1016;
+}
+.media-box img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+.case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8ab4f8;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.case-link:hover {
+  color: #b9d2fb;
+}
+.hide-case-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: #e6eaf0;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.hide-case-btn:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+.article-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(19, 26, 35, 0.55);
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  overflow: hidden;
+  color: #e6eaf0;
+  scroll-snap-align: start;
+  min-width: 0;
+}
+.article-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.85);
+  color: #e6eaf0;
+}
+
+/* Timeline hover */
+.timeline-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* ============================================================
+   Cloud delivery path grid: 5 columns, single column < 640px
+   ============================================================ */
+.flow-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (max-width: 639px) {
+  .flow-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Research + Certifications: side by side, stacked on narrow screens */
+.research-certs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 0 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Contact row value link */
+.contact-value {
+  color: #e6eaf0;
+  transition: color 0.2s;
+}
+.contact-value:hover {
+  color: #8ab4f8;
+}

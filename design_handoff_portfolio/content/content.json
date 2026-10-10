@@ -1,0 +1,813 @@
+{
+  "sections": {
+    "heroPillars": [
+      {
+        "label": "Backend Engineering",
+        "color": "#7DD3C0"
+      },
+      {
+        "label": "AWS & Cloud Architecture",
+        "color": "#8AB4F8"
+      },
+      {
+        "label": "Machine Learning & GenAI",
+        "color": "#A78BFA"
+      },
+      {
+        "label": "Agentic AI",
+        "color": "#C4B5FD"
+      }
+    ],
+    "heroStats": [
+      {
+        "label": "Production experience",
+        "value": "4+ years"
+      },
+      {
+        "label": "Backend engineering",
+        "value": "Java · Spring Boot · Microservices"
+      },
+      {
+        "label": "Cloud & DevOps",
+        "value": "AWS · Kubernetes · Docker · CI/CD"
+      },
+      {
+        "label": "ML & AI",
+        "value": "Machine Learning · GenAI · RAG · AI Agents"
+      },
+      {
+        "label": "Platform scale",
+        "value": "Thousands of concurrent searches"
+      },
+      {
+        "label": "Certification",
+        "value": "AWS Solutions Architect – Associate"
+      },
+      {
+        "label": "Research",
+        "value": "CNN Knowledge Distillation · 2.2× faster"
+      }
+    ],
+    "pillars": [
+      {
+        "num": "01",
+        "title": "Backend Engineering",
+        "tag": "Foundation",
+        "lead": "This is my day job: Spring Boot services, REST APIs, supplier integrations, and a lot of time spent making databases faster.",
+        "tech": [
+          "Java",
+          "Spring Boot",
+          "Microservices",
+          "REST APIs",
+          "MySQL",
+          "Redis",
+          "Elasticsearch",
+          "Concurrency"
+        ],
+        "href": "#backend"
+      },
+      {
+        "num": "02",
+        "title": "AWS & Cloud Architecture",
+        "tag": "Certified",
+        "lead": "I care about what happens after the merge: how a service gets deployed, monitored, migrated and kept affordable. I've done this across AWS, OCI and Azure.",
+        "tech": [
+          "AWS",
+          "OCI",
+          "Kubernetes",
+          "Docker",
+          "CI/CD",
+          "Grafana",
+          "Kibana",
+          "Cloud migration"
+        ],
+        "href": "#cloud"
+      },
+      {
+        "num": "03",
+        "title": "ML, GenAI & Agentic AI",
+        "tag": "Current focus",
+        "lead": "I started in deep-learning research. Today I'm building with LLMs, RAG, vector search and agents, and bringing the same reliability habits I use on backend work.",
+        "tech": [
+          "PyTorch",
+          "LLMs",
+          "RAG",
+          "Embeddings",
+          "Vector search",
+          "AI agents",
+          "Agentic workflows",
+          "Bedrock"
+        ],
+        "href": "#ai"
+      }
+    ],
+    "backendCaps": [
+      {
+        "title": "Backend Services & APIs",
+        "body": "Designing and maintaining Spring Boot microservices and REST APIs, including backward-compatible API extensions and booking-related services across the Tritium platform.",
+        "evidence": "Java · Spring Boot · REST APIs · Microservices"
+      },
+      {
+        "title": "H2H & Third-Party Integrations",
+        "body": "Integrated multiple hotel supplier systems into the Tritium REST framework, supporting end-to-end search-to-booking workflows and enterprise travel clients.",
+        "evidence": "H2H Integrations · Supplier APIs · Search-to-Booking"
+      },
+      {
+        "title": "Database Engineering",
+        "body": "Led the application-side migration of the primary production database from Azure MariaDB to OCI MySQL, including application changes required for a zero-downtime production migration across high-traffic search pods.",
+        "evidence": "MariaDB → MySQL · SQL · Query Optimization · Indexing"
+      },
+      {
+        "title": "Performance & Reliability",
+        "body": "Investigated and resolved JVM, database, connection-pool, concurrency, and resource-related production issues. Optimized request pipelines by eliminating redundant third-party API calls, achieving approximately 75% operational cost reduction.",
+        "evidence": "JVM · Concurrency · Profiling · Load Testing · Performance Optimization"
+      },
+      {
+        "title": "Distributed Caching",
+        "body": "Enhanced Redis-based distributed caching with real-time cache updates during pre-booking to handle supplier rate changes and reduce stale-data-related price inconsistencies.",
+        "evidence": "Redis · Distributed Caching · Cache Consistency"
+      },
+      {
+        "title": "Production Automation",
+        "body": "Built an internal Spring Boot + Angular automation platform for pre-approved SQL execution, SSH/SCP remote execution, audit logging, and controlled environment promotion across QA, STG, and PROD—reducing the need for manual production server access.",
+        "evidence": "Spring Boot · Automation · SSH/SCP · Audit Logging · CI/CD"
+      },
+      {
+        "title": "Messaging & Batch Processing",
+        "body": "Developed batch-processing workflows using a producer-consumer architecture, queues, and thread pools for hotel-content ingestion and database updates.",
+        "evidence": "Kafka · Queues · Thread Pools · Producer-Consumer"
+      },
+      {
+        "title": "Containers & Cloud-Native Operations",
+        "body": "Deployed and managed Spring Boot microservices using Docker and Kubernetes, including container health monitoring and rollout strategies, alongside CI/CD and cloud migration work.",
+        "evidence": "Docker · Kubernetes · CI/CD · AWS · OCI · Azure"
+      }
+    ],
+    "cloudFlow": [
+      {
+        "idx": "01",
+        "arrow": "→",
+        "label": "Build",
+        "tools": "CI/CD pipelines, versioned Docker base images"
+      },
+      {
+        "idx": "02",
+        "arrow": "→",
+        "label": "Promote",
+        "tools": "Dev → QA → STG → PROD with the same audited scripts"
+      },
+      {
+        "idx": "03",
+        "arrow": "→",
+        "label": "Run",
+        "tools": "Kubernetes deployments, parallel environments"
+      },
+      {
+        "idx": "04",
+        "arrow": "→",
+        "label": "Observe",
+        "tools": "Grafana, Kibana, Elasticsearch"
+      },
+      {
+        "idx": "05",
+        "arrow": "",
+        "label": "Evolve",
+        "tools": "Cloud migration, capacity and cost tuning"
+      }
+    ],
+    "cloudCaps": [
+      {
+        "title": "Cloud Architecture",
+        "body": "Experience working with cloud-hosted, service-based architectures across OCI and Azure, with AWS architecture knowledge covering scalable, secure and reliable cloud systems.",
+        "evidence": "AWS · OCI · Azure · Cloud Architecture"
+      },
+      {
+        "title": "Cloud Migration",
+        "body": "Contributed to the Azure-to-OCI cloud migration and led the application-side migration of the primary production database from Azure MariaDB to OCI MySQL, ensuring the application remained available across high-traffic search pods during the migration.",
+        "evidence": "Azure → OCI · MariaDB → MySQL · Production Migration"
+      },
+      {
+        "title": "Containers & Kubernetes",
+        "body": "Deploy and manage Spring Boot microservices using Docker and Kubernetes, including container health monitoring and rollout strategies.",
+        "evidence": "Docker · Kubernetes · Spring Boot"
+      },
+      {
+        "title": "CI/CD & Infrastructure Automation",
+        "body": "Contributed to CI/CD infrastructure and Linux-based environments during cloud migration initiatives, supporting reliable build, deployment and operational workflows.",
+        "evidence": "CI/CD · Linux · Jenkins · GitHub Actions"
+      },
+      {
+        "title": "Production Operations & Observability",
+        "body": "Investigate production issues across JVM, databases, connection pools, CPU utilization, pod restarts and application resources, using monitoring, profiling and diagnostic tools to improve system reliability.",
+        "evidence": "Elasticsearch · Kibana · Grafana · JVM Diagnostics · Production Troubleshooting"
+      },
+      {
+        "title": "Reliability & Cost Optimization",
+        "body": "Optimized backend request flows by eliminating redundant third-party API calls, achieving approximately 75% operational cost reduction while improving application performance.",
+        "evidence": "Cost Optimization · Performance · Reliability"
+      },
+      {
+        "title": "AWS Architecture",
+        "body": "AWS Certified Solutions Architect – Associate, with a focus on cloud architecture, scalability, reliability, security and cost-aware system design.",
+        "evidence": "AWS Certified Solutions Architect – Associate"
+      }
+    ],
+    "aiPath": [
+      {
+        "title": "Deep Learning & Model Compression",
+        "body": "For my final-year research, I explored knowledge distillation for CNN-based head pose estimation, using a smaller MobileNetV2 model to learn from a larger ResNet50 model. The resulting approach achieved approximately 2.2× faster inference while maintaining comparable accuracy.",
+        "tech": "Research · Computer Vision · CNNs · Knowledge Distillation · MobileNetV2 · ResNet50"
+      },
+      {
+        "title": "Machine Learning & Computer Vision",
+        "body": "Built academic and personal ML projects covering data preparation, image processing, model development, and algorithm implementation, strengthening my understanding of machine-learning workflows beyond simply using pre-built models.",
+        "tech": "Machine Learning · Computer Vision · Python · Data Processing"
+      },
+      {
+        "title": "Generative AI & Agentic AI",
+        "body": "Currently focused on building and experimenting with LLM-powered applications, RAG pipelines, vector search, tool-using agents, and agentic workflows. I’m particularly interested in how AI agents can interact with software systems, use tools, retrieve relevant information, and execute multi-step tasks reliably.",
+        "tech": "LLMs · RAG · Vector Search · AI Agents · Agentic Workflows"
+      }
+    ],
+    "certTech": [
+      "EC2",
+      "S3",
+      "Lambda",
+      "RDS",
+      "VPC",
+      "IAM",
+      "CloudWatch",
+      "Well-Architected"
+    ],
+    "timeline": [
+      {
+        "period": "2024 — Present",
+        "org": "CodeGen International · TravelBox™ Tritium",
+        "role": "Senior Software Engineer",
+        "intro": "Develop and maintain Java and Spring Boot backend services for an enterprise travel technology platform, working across search, pre-booking, booking, amendment, and cancellation workflows.",
+        "points": [
+          "Designed and enhanced REST APIs and backend workflows supporting core travel operations.",
+          "Optimized request-processing pipelines by reducing redundant third-party API calls, achieving approximately 60% operational cost reduction.",
+          "Improved Redis-based caching with real-time updates during pre-booking to reduce stale supplier pricing.",
+          "Led the Java 11 → Java 21 migration from QA through production, ensuring application compatibility and stability.",
+          "Led the production database migration from Azure MariaDB to OCI MySQL with zero downtime.",
+          "Investigated and resolved concurrency, race-condition, JVM, database, and connection-pool issues using load testing and production analysis.",
+          "Contributed to cloud migration and CI/CD improvements supporting reliable application delivery.",
+          "Mentored junior engineers through code reviews and technical guidance."
+        ]
+      },
+      {
+        "period": "2022 — 2023",
+        "org": "CodeGen International · TravelBox™ Tritium",
+        "role": "Software Engineer",
+        "intro": "Worked on backend services and supplier integrations for the Tritium travel platform, focusing on APIs, hotel integrations, batch processing, and cloud-native service deployment.",
+        "points": [
+          "Integrated multiple H2H hotel suppliers into the Tritium REST platform, supporting end-to-end search-to-booking workflows.",
+          "Designed and implemented REST API extensions while maintaining backward compatibility for existing integrations.",
+          "Developed batch-processing services using producer-consumer patterns, queues, and thread pools for large-scale hotel content processing.",
+          "Deployed and managed Spring Boot microservices using Docker and Kubernetes.",
+          "Investigated and resolved threading and memory-related production issues using heap dumps, thread analysis, and production diagnostics."
+        ]
+      },
+      {
+        "period": "2020 — 2021",
+        "org": "ACCELaero",
+        "role": "Trainee Software Engineer",
+        "intro": "Started my engineering career working across backend development and DevOps-related activities in an aviation technology environment.",
+        "points": [
+          "Supported Jenkins-based CI/CD pipelines for software delivery.",
+          "Worked with Linux-based development and deployment environments.",
+          "Assisted with infrastructure automation and backup processes.",
+          "Collaborated with DevOps and cross-functional engineering teams."
+        ]
+      }
+    ],
+    "contactRows": [
+      {
+        "label": "Email",
+        "value": "madhusankanuwan448@gmail.com",
+        "href": "mailto:madhusankanuwan448@gmail.com"
+      },
+      {
+        "label": "Phone",
+        "value": "+94 77 301 5590",
+        "href": "tel:+94773015590"
+      },
+      {
+        "label": "GitHub",
+        "value": "@NuwanMadhusanka",
+        "href": "https://github.com/NuwanMadhusanka"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "in/nuwan98",
+        "href": "https://www.linkedin.com/in/nuwan98/"
+      },
+      {
+        "label": "Medium",
+        "value": "@nuwanmadhusankarulz",
+        "href": "https://medium.com/@nuwanmadhusankarulz"
+      }
+    ],
+    "navLinks": [
+      {
+        "href": "#expertise",
+        "label": "Expertise"
+      },
+      {
+        "href": "#projects",
+        "label": "Projects"
+      },
+      {
+        "href": "#experience",
+        "label": "Experience"
+      },
+      {
+        "href": "#research",
+        "label": "Research"
+      },
+      {
+        "href": "#writing",
+        "label": "Writing"
+      }
+    ]
+  },
+  "projectCategories": {
+    "backend": {
+      "label": "Backend & Distributed Systems",
+      "color": "#7DD3C0"
+    },
+    "cloud": {
+      "label": "Cloud & AWS",
+      "color": "#8AB4F8"
+    },
+    "ai": {
+      "label": "AI & Generative AI",
+      "color": "#A78BFA"
+    },
+    "mlcv": {
+      "label": "Machine Learning & Computer Vision",
+      "color": "#F5A97F"
+    },
+    "data": {
+      "label": "Data & Search Engineering",
+      "color": "#C9D24A"
+    },
+    "devops": {
+      "label": "DevOps & Platform Engineering",
+      "color": "#F3A5C0"
+    }
+  },
+  "projectOrder": [
+    "dbmigration",
+    "tritiumtool",
+    "logging",
+    "headpose",
+    "realestate",
+    "sports",
+    "mlnotebooks",
+    "fortifystack"
+  ],
+  "projects": [
+    {
+      "id": "headpose",
+      "cat": "mlcv",
+      "featured": true,
+      "title": "Speeding up CNN head pose estimation with knowledge distillation",
+      "summary": "Peer-reviewed research: compressing a ResNet50-based head pose estimator into a MobileNetV2 student that keeps accuracy while halving inference time.",
+      "tech": [
+        "Python",
+        "PyTorch",
+        "MobileNetV2",
+        "ResNet50",
+        "Relational KD"
+      ],
+      "metrics": [
+        {
+          "value": "2.2×",
+          "label": "faster inference"
+        },
+        {
+          "value": "3.4708",
+          "label": "MAE vs 3.4695"
+        }
+      ],
+      "repo": "https://github.com/Research-Project-4th-Year/cnn_headpose_estimation",
+      "slotHint": "Architecture diagram / results chart",
+      "detail": [
+        {
+          "heading": "Problem",
+          "body": "Deep head pose estimation models such as Hopenet perform well but are too heavy for resource-limited devices, which restricts scalability and deployability in real-world settings like driver monitoring and online proctoring."
+        },
+        {
+          "heading": "Architecture",
+          "body": "A teacher–student setup: a ResNet50 Hopenet teacher supervising a MobileNetV2 student, trained with relational knowledge distillation so the student learns the structure of the teacher's representations rather than only its outputs."
+        },
+        {
+          "heading": "Implementation approach",
+          "body": "Benchmarked candidate lightweight backbones, then introduced an exchange loss function into the distillation loop — a novel contribution of the study — to alternate the supervision signal during training and stabilise the student's convergence."
+        },
+        {
+          "heading": "Engineering decisions",
+          "body": "Optimised for the accuracy-per-millisecond frontier instead of raw accuracy. Relational distillation was chosen over response-based distillation because pose is a continuous, geometrically structured target where relative relationships carry most of the signal."
+        },
+        {
+          "heading": "Results",
+          "body": "The distilled model reached a Mean Average Error of 3.4708 against the ResNet50 teacher's 3.4695, while per-image inference dropped from 195.9 ms to 89.9 ms. Written up as a journal manuscript."
+        },
+        {
+          "heading": "Lessons learned",
+          "body": "Compression is an architecture decision, not a post-processing step. Also: a rigorous, reproducible evaluation harness is worth more than any single training trick — most apparent gains disappeared under consistent measurement."
+        }
+      ]
+    },
+    {
+      "id": "dbmigration",
+      "cat": "cloud",
+      "featured": true,
+      "catLabel": "Cloud & Production Engineering",
+      "title": "Primary Database Migration: MariaDB → MySQL",
+      "summary": "Application-side ownership of a business-critical production database migration, moving the primary workload from Azure MariaDB to OCI MySQL across Dev, QA, STG and PROD.",
+      "techLabel": "Core technologies",
+      "tech": [
+        "MySQL",
+        "MariaDB",
+        "Spring Boot",
+        "HikariCP",
+        "Kubernetes",
+        "Docker",
+        "Python",
+        "OCI",
+        "Azure"
+      ],
+      "metrics": [
+        {
+          "value": "Near-zero downtime",
+          "label": "Production cutover"
+        },
+        {
+          "value": "Dev → PROD",
+          "label": "End-to-end migration"
+        }
+      ],
+      "slotHint": "Migration / cutover architecture diagram",
+      "detail": [
+        {
+          "heading": "Problem",
+          "body": "The primary database supported high-volume travel search and booking workloads. Migrating from MariaDB to MySQL required more than moving data — the schema, application code, database connectivity, transaction handling, deployment environments and performance characteristics all had to be validated."
+        },
+        {
+          "heading": "My role",
+          "body": "I owned the application-side migration, working from schema analysis and application changes through environment validation and production cutover. Infrastructure and environment setup were supported by the company's infrastructure and support teams."
+        },
+        {
+          "heading": "Migration approach",
+          "body": "The migration was performed incrementally across Dev → QA → STG → PROD. Separate MySQL-based environments and application deployments allowed the new database setup to be validated without disrupting the existing MariaDB workloads."
+        },
+        {
+          "heading": "Database & application changes",
+          "body": "The migration required several compatibility changes, including:",
+          "list": [
+            "Replacing MariaDB sequence-based ID generation with MySQL AUTO_INCREMENT",
+            "Updating MariaDB-specific native SQL queries",
+            "Migrating from the MariaDB JDBC driver to the MySQL JDBC driver",
+            "Reviewing and improving transaction boundaries",
+            "Ensuring tables had appropriate primary keys and indexes",
+            "Updating application and database configuration for the new environment"
+          ]
+        },
+        {
+          "heading": "Performance engineering",
+          "body": "Load testing in QA exposed several database and application bottlenecks. I worked on:",
+          "list": [
+            "Index tuning for high-traffic queries",
+            "Precomputed summary tables for heavy reporting workloads",
+            "Application-level caching",
+            "Connection-pool migration from Apache DBCP to HikariCP",
+            "Query and database performance analysis using Performance Schema and slow-query logs"
+          ],
+          "after": "These changes improved response times and overall stability under load."
+        },
+        {
+          "heading": "Near-zero-downtime cutover",
+          "body": "For the final migration, the existing MariaDB database remained active while the initial data was transferred to MySQL. I developed Python synchronization scripts to capture new and updated records during the migration window and synchronize them into MySQL.",
+          "after": "The process also included validation and correction of AUTO_INCREMENT values to ensure data consistency after synchronization."
+        },
+        {
+          "heading": "Result",
+          "body": "The production migration was completed successfully without major incidents, providing a stable MySQL foundation for the platform and improving database performance, transaction handling and readiness for a managed high-availability architecture."
+        },
+        {
+          "heading": "Key engineering areas",
+          "body": "Database Migration · Backend Engineering · Cloud Migration · Performance Optimization · Kubernetes · CI/CD · Production Reliability"
+        }
+      ]
+    },
+    {
+      "id": "tritiumtool",
+      "cat": "devops",
+      "featured": true,
+      "title": "Tritium Integration Automation & Configuration Management Tool",
+      "summary": "An internal automation tool I designed and developed to reduce repetitive and high-risk manual steps involved in integrating H2H suppliers into the Tritium platform.",
+      "tech": [
+        "Spring Boot",
+        "Angular",
+        "SSH",
+        "SCP",
+        "Docker",
+        "MySQL"
+      ],
+      "metrics": [
+        {
+          "value": "Primary ownership",
+          "label": "Spring Boot backend"
+        },
+        {
+          "value": "QA → PROD",
+          "label": "Controlled promotion workflow"
+        }
+      ],
+      "slotHint": "Tool UI screenshot / audit log view",
+      "detail": [
+        {
+          "heading": "Problem",
+          "body": "Adding new H2H suppliers involved several manual operational tasks, including applying SQL scripts to the primary database, updating thread-pool and stash configurations in build files, and rebuilding Docker base images used across Tritium services.",
+          "body2": "Developers previously had to access multiple servers, modify build files manually, and execute scripts. This created operational risk, limited auditability, and a higher chance of human error, particularly when changes were promoted across QA, STG and PROD."
+        },
+        {
+          "heading": "Solution",
+          "body": "I designed and developed an internal automation tool consisting of a Spring Boot backend and an Angular UI. I had primary ownership of the backend, while the Angular UI was developed with assistance from an AI tool.",
+          "body2": "The tool allows developers to:",
+          "list": [
+            "Execute only pre-approved SQL scripts",
+            "Apply controlled configuration changes through the UI",
+            "Perform remote file operations without manually accessing servers",
+            "Promote the same scripts and configurations through QA → STG → PROD",
+            "Review execution and file-change activity through audited logs"
+          ]
+        },
+        {
+          "heading": "Backend Engineering",
+          "body": "My primary contribution was the Spring Boot backend, including:",
+          "list": [
+            "Secure file access and updates using SCP",
+            "Remote script execution using SSH",
+            "Request validation and structured error handling",
+            "Structured audit logging with pagination",
+            "Controlled execution of approved operations",
+            "Dockerization of the application",
+            "Deployment through QA to PROD"
+          ]
+        },
+        {
+          "heading": "Impact",
+          "body": "The tool reduced repetitive manual work and operational risk, improved the auditability of production changes, and provided a more controlled workflow for H2H supplier integrations across environments."
+        },
+        {
+          "heading": "Project details",
+          "body": "Project duration: Nov 2025 – Dec 2025",
+          "body2": "Associated with: CodeGen International · TravelBox™ Tritium"
+        }
+      ]
+    },
+    {
+      "id": "logging",
+      "cat": "data",
+      "featured": true,
+      "title": "Multi-hotel search logging & Elasticsearch optimisation",
+      "summary": "A scheduled Spring Boot service that restored full search logging on a hotel integration hub handling thousands of concurrent searches — with selective retention and batch cleanup to keep Elasticsearch stable.",
+      "tech": [
+        "Spring Boot",
+        "Elasticsearch",
+        "Kibana",
+        "Grafana",
+        "Kubernetes",
+        "Docker"
+      ],
+      "metrics": [
+        {
+          "value": "Full",
+          "label": "logging restored"
+        },
+        {
+          "value": "Batch",
+          "label": "deletion + parallelism"
+        }
+      ],
+      "slotHint": "Grafana / Kibana dashboard screenshot",
+      "detail": [
+        {
+          "heading": "Problem",
+          "body": "Tritium is a hotel integration hub handling thousands of searches simultaneously. Multi-hotel search logs were available in Kibana, but production resource constraints forced logging to be disabled to reduce Elasticsearch load. Client queries then showed those logs were essential for investigations — so full logging had to return without impacting production performance."
+        },
+        {
+          "heading": "Why not built-in",
+          "body": "Kibana's built-in logging could not automatically filter, process and clean up logs in a controlled way, which was the critical requirement."
+        },
+        {
+          "heading": "Architecture",
+          "body": "A dedicated Spring Boot service collecting multi-hotel search logs on a schedule, applying custom rules to selectively keep important logs while removing unnecessary ones, and processing and deleting in batches to avoid overloading the system. Packaged as a Docker image and deployed with Kubernetes manifests."
+        },
+        {
+          "heading": "Challenges",
+          "body": "After deployment we observed high CPU usage on the Elasticsearch nodes. I addressed it with batch-wise deletion and parallel processing, query optimisation for faster execution, and Grafana dashboards to monitor CPU and performance metrics."
+        },
+        {
+          "heading": "Results",
+          "body": "Full multi-hotel search logging with selective retention, improved observability, optimised Elasticsearch performance, and stable production operation under heavy load."
+        },
+        {
+          "heading": "Lessons learned",
+          "body": "Retention policy is the design. Deciding what not to keep was what made the logging affordable enough to turn back on."
+        }
+      ]
+    },
+    {
+      "id": "fortifystack",
+      "cat": "devops",
+      "title": "FortifyStack",
+      "summary": "Personal platform-engineering project exploring hardening and deployment automation for application stacks. Repository is public — description here is a placeholder pending your copy.",
+      "tech": [
+        "Automation",
+        "Platform tooling"
+      ],
+      "repo": "https://github.com/NuwanMadhusanka/fortifystack",
+      "slotHint": "Project screenshot",
+      "detail": [
+        {
+          "heading": "Note",
+          "body": "I could not read this repository's contents, so this card needs your real description: what problem FortifyStack solves, its architecture, and the outcome. Send me a few lines and I will write it into the case study."
+        }
+      ]
+    },
+    {
+      "id": "realestate",
+      "cat": "mlcv",
+      "title": "Real estate price prediction",
+      "summary": "End-to-end regression project: cleaning noisy property listings, engineering location features, and serving predictions behind a small web interface.",
+      "tech": [
+        "Python",
+        "scikit-learn",
+        "Pandas",
+        "Flask"
+      ],
+      "repo": "https://github.com/NuwanMadhusanka/Real-Estate-Price-Prediction",
+      "slotHint": "App screenshot",
+      "detail": [
+        {
+          "heading": "Problem",
+          "body": "Listing data is noisy, inconsistently labelled and full of outliers, which makes naive price models confidently wrong."
+        },
+        {
+          "heading": "Implementation approach",
+          "body": "Outlier removal driven by domain rules (price per square foot, bedroom-to-area sanity checks), one-hot encoded locations with a long-tail bucket, and grid-searched model selection."
+        },
+        {
+          "heading": "Architecture",
+          "body": "Trained model serialised and served through a lightweight Flask API with a minimal front end for entering property attributes."
+        },
+        {
+          "heading": "Lessons learned",
+          "body": "Most of the accuracy came from data cleaning decisions, not model choice — and each cleaning rule needed to be defensible, not just beneficial to the metric."
+        }
+      ]
+    },
+    {
+      "id": "sports",
+      "cat": "mlcv",
+      "title": "Sports celebrity image classification",
+      "summary": "Classical computer vision pipeline: face and eye detection to filter usable images, wavelet-transform feature extraction, and a tuned classifier served through a web UI.",
+      "tech": [
+        "OpenCV",
+        "Haar cascades",
+        "Wavelet transform",
+        "scikit-learn"
+      ],
+      "repo": "https://github.com/NuwanMadhusanka/sports_celebrity_classification",
+      "slotHint": "Classifier UI screenshot",
+      "detail": [
+        {
+          "heading": "Problem",
+          "body": "Small, scraped image datasets contain many unusable samples — obstructed faces, group shots, wrong subjects — which dominate the error rate before any model is trained."
+        },
+        {
+          "heading": "Implementation approach",
+          "body": "Cascade-based detection of face plus two eyes as an automatic quality gate, then stacked raw and wavelet-transformed features so the classifier sees both colour and edge structure."
+        },
+        {
+          "heading": "Engineering decisions",
+          "body": "Chose classical CV over fine-tuning a deep network: with a few hundred images per class, the feature-engineering path was faster to reason about and far cheaper to serve."
+        },
+        {
+          "heading": "Lessons learned",
+          "body": "A deterministic data-quality gate at ingestion did more for accuracy than any hyperparameter search."
+        }
+      ]
+    },
+    {
+      "id": "mlnotebooks",
+      "cat": "mlcv",
+      "title": "Machine learning foundations",
+      "summary": "Working notebook collection implementing core algorithms and workflows from first principles — regression, classification, evaluation and feature engineering.",
+      "tech": [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Jupyter"
+      ],
+      "repo": "https://github.com/NuwanMadhusanka/Machine-Learning",
+      "slotHint": "Notebook / plot screenshot",
+      "detail": [
+        {
+          "heading": "Purpose",
+          "body": "A reference implementation set built while learning: each notebook derives an algorithm, implements it, then compares against the library version to check understanding rather than accept a result."
+        },
+        {
+          "heading": "Lessons learned",
+          "body": "Implementing evaluation metrics by hand changed how I read other people's benchmarks."
+        }
+      ]
+    }
+  ],
+  "articlesDisplayOrder": [
+    8,
+    7,
+    6,
+    0,
+    4,
+    5,
+    1,
+    2,
+    3
+  ],
+  "articles": [
+    {
+      "title": "Spec-Driven Development: How AI Is Flipping the Script on Software Engineering",
+      "category": "AI & Software Engineering",
+      "blurb": "Why specifying intent precisely is becoming the core engineering skill when agents write the code.",
+      "read": "9 min read",
+      "date": "May 2026",
+      "href": "https://medium.com/@nuwanmadhusankarulz/spec-driven-development-how-ai-is-flipping-the-script-on-software-engineering-cf9f1bb58c55"
+    },
+    {
+      "title": "Database Performance Optimization: The Strategies That Actually Work",
+      "category": "Databases",
+      "blurb": "Indexing, query shape and access patterns — what moves latency, and what only looks like it does.",
+      "read": "11 min read",
+      "date": "2025"
+    },
+    {
+      "title": "Lessons Learned from a Major Travel Platform Database Migration",
+      "category": "Cloud & Migration",
+      "blurb": "Cutover strategy, reconciliation and rollback on a system that could not go offline.",
+      "read": "10 min read",
+      "date": "2025"
+    },
+    {
+      "title": "Logging Best Practices: From Fundamentals to Elasticsearch",
+      "category": "Observability",
+      "blurb": "Structured log schemas, levels that mean something, and making Elasticsearch cost-predictable.",
+      "read": "12 min read",
+      "date": "Nov 2025",
+      "href": "https://medium.com/@nuwanmadhusankarulz/logging-best-practices-from-fundamentals-to-elasticsearch-b22ff32e8a01"
+    },
+    {
+      "title": "Enhancing Java Concurrency: Leveraging Virtual Threads for Scalable IO-Bound Applications",
+      "category": "Backend Engineering",
+      "blurb": "Where Project Loom genuinely raises throughput, and which bottleneck it exposes next.",
+      "read": "10 min read",
+      "date": "2024"
+    },
+    {
+      "title": "Race Conditions & Data Races: The Hidden Traps in Multithreaded Code",
+      "category": "Concurrency",
+      "blurb": "The distinction most bug reports get wrong, and how each one actually gets fixed.",
+      "read": "8 min read",
+      "date": "2024"
+    },
+    {
+      "title": "Generative vs. Agentic AI: From Helpful Chatbots to Proactive Partners",
+      "category": "Agentic AI",
+      "blurb": "How reactive, prompt-driven generation differs from goal-driven agents that perceive, decide, act and learn in a loop.",
+      "read": "4 min read",
+      "date": "Sep 2026",
+      "href": "https://medium.com/@nuwanmadhusankarulz/generative-vs-agentic-ai-from-helpful-chatbots-to-proactive-partners-0472a31e1651"
+    },
+    {
+      "title": "AI Assistants vs. AI Agents: What’s the Real Difference?",
+      "category": "AI Agents",
+      "blurb": "Assistants respond to each prompt; agents take a goal, use tools and memory, and plan their own steps. Where each fits, and their limits.",
+      "read": "5 min read",
+      "date": "Sep 2026",
+      "href": "https://medium.com/@nuwanmadhusankarulz/ai-assistants-vs-ai-agents-whats-the-real-difference-3a88607c31c0"
+    },
+    {
+      "title": "Beyond Chatbots: How AI Agents Are Learning to Think, Plan, and Work Like Humans",
+      "category": "Agentic Workflows",
+      "blurb": "Compound AI systems, RAG, the ReAct loop, and how to decide how much autonomy a task actually needs.",
+      "read": "5 min read",
+      "date": "Sep 2026",
+      "href": "https://medium.com/@nuwanmadhusankarulz/beyond-chatbots-how-ai-agents-are-learning-to-think-plan-and-work-like-humans-0be7f2cdb451"
+    }
+  ]
+}
