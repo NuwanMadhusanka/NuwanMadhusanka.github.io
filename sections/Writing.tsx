@@ -77,6 +77,7 @@ export function Writing() {
     <section id="writing" className="section">
       <SectionEyebrow num="09" label="Technical writing" />
       <div
+        data-reveal
         style={{
           display: 'flex',
           flexWrap: 'wrap',

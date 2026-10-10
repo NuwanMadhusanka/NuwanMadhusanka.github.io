@@ -30,6 +30,7 @@ export function CoreExpertise() {
             <a
               key={p.num}
               href={p.href}
+              data-reveal
               className="pillar-card"
               style={{
                 border: `1px solid ${color}33`,

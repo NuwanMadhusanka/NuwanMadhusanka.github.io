@@ -51,6 +51,8 @@ export function ResearchCerts() {
       <section id="research" style={{ padding: 'clamp(52px,7vw,76px) 0' }}>
         <SectionEyebrow num="07" label="Research & publications" />
         <div
+          data-reveal
+          className="soft-hover"
           style={{
             border: '1px solid rgba(245,169,127,.22)',
             borderRadius: '16px',
@@ -106,6 +108,8 @@ export function ResearchCerts() {
       <section id="certifications" style={{ padding: 'clamp(52px,7vw,76px) 0' }}>
         <SectionEyebrow num="08" label="Certifications" />
         <div
+          data-reveal
+          className="soft-hover"
           style={{
             border: '1px solid rgba(138,180,248,.22)',
             borderRadius: '16px',

@@ -42,6 +42,7 @@ export function FilterChips({
           <button
             key={f.key}
             type="button"
+            className="filter-chip"
             onClick={() => onSelect(f.key)}
             aria-pressed={on}
             style={{

@@ -102,7 +102,7 @@ export function Projects() {
   return (
     <section id="projects" className="section">
       <SectionEyebrow num="05" label="Selected projects" />
-      <div className="sec-head-grid">
+      <div className="sec-head-grid" data-reveal>
         <h2 className="h2">Things I&apos;ve built</h2>
         <p className="lead">
           Production work comes first, then research and side projects. Open a
@@ -167,6 +167,7 @@ function ProjectCard({
   const kind = PROJECT_KIND[p.id] || '';
   return (
     <article
+      className="project-card"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -174,7 +175,8 @@ function ProjectCard({
         borderRadius: '16px',
         overflow: 'hidden',
         background: 'rgba(19,26,35,.55)',
-        transition: 'border-color .25s, box-shadow .25s',
+        transition:
+          'border-color .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s cubic-bezier(.2,.7,.2,1), transform .3s cubic-bezier(.2,.7,.2,1)',
         minWidth: 0,
         height: '100%',
         boxShadow: isOpen ? `0 0 0 1px ${color}55` : undefined,

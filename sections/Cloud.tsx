@@ -14,7 +14,7 @@ export function Cloud() {
         accent="#8AB4F8"
         variant="solid"
       />
-      <div className="sec-head-grid">
+      <div className="sec-head-grid" data-reveal>
         <h2 className="h2">
           Designing, deploying and operating cloud-based systems
         </h2>
@@ -31,6 +31,7 @@ export function Cloud() {
 
       {/* Delivery path panel */}
       <div
+        data-reveal
         style={{
           position: 'relative',
           border: '1px solid rgba(138,180,248,.2)',
@@ -60,6 +61,7 @@ export function Cloud() {
           {cloudFlow.map((f) => (
             <div
               key={f.idx}
+              className="soft-hover"
               style={{
                 border: '1px solid rgba(138,180,248,.18)',
                 borderRadius: '12px',

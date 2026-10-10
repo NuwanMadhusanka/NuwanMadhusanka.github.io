@@ -28,6 +28,7 @@ export function Contact() {
       }}
     >
       <div
+        data-reveal
         style={{
           position: 'relative',
           border: '1px solid rgba(255,255,255,.09)',

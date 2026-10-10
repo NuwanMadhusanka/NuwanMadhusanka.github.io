@@ -14,7 +14,7 @@ export function Backend() {
         accent="#7DD3C0"
         variant="solid"
       />
-      <div className="sec-head-grid">
+      <div className="sec-head-grid" data-reveal>
         <h2 className="h2">
           Building and operating production backend systems
         </h2>

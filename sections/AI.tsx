@@ -12,7 +12,7 @@ export function AI() {
         accent="#A78BFA"
         variant="solid"
       />
-      <div className="sec-head-grid">
+      <div className="sec-head-grid" data-reveal>
         <h2 className="h2">From deep-learning research to applied AI</h2>
         <div style={{ display: 'grid', gap: '14px' }}>
           <p className="lead">
@@ -43,6 +43,8 @@ export function AI() {
           return (
             <div
               key={s.title}
+              data-reveal
+              className="soft-hover"
               style={{
                 border: highlighted
                   ? '1px solid rgba(167,139,250,.3)'

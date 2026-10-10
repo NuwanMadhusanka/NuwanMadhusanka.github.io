@@ -503,3 +503,245 @@ a:hover {
 .contact-value:hover {
   color: #8ab4f8;
 }
+
+/* ============================================================
+   UI ENHANCEMENTS (hover, motion, scroll-reveal, show more/less)
+   Purely presentational — no content, layout, or markup structure
+   is changed by this block.
+   ============================================================ */
+
+/* Premium easing on interactive surfaces */
+.card,
+.pillar-card,
+.article-card,
+.project-card {
+  transition: border-color 0.32s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.32s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.32s cubic-bezier(0.2, 0.7, 0.2, 1), background 0.32s ease;
+}
+
+/* Richer card hover: slightly stronger lift + soft inner ring */
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px -26px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* Pillar card: accent sheen that fades in on hover */
+.pillar-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    130% 120% at 100% 0%,
+    rgba(255, 255, 255, 0.07),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity 0.32s ease;
+  pointer-events: none;
+}
+.pillar-card:hover::after {
+  opacity: 1;
+}
+.pillar-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Interactive tech tags / chips */
+.tech-tag,
+.tech-tag-sm {
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
+}
+.tech-tag:hover,
+.tech-tag-sm:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.07);
+  color: #e6eaf0;
+  transform: translateY(-1px);
+}
+
+/* Animated gradient-text shimmer */
+.grad-text {
+  background-size: 220% 100%;
+  animation: grad-shimmer 9s ease-in-out infinite;
+}
+@keyframes grad-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Nav-link animated underline */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.5px;
+  width: 0;
+  border-radius: 1px;
+  background: linear-gradient(90deg, #8ab4f8, #7dd3c0);
+  transition: width 0.26s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Primary button sheen sweep */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255, 255, 255, 0.55),
+    transparent
+  );
+  transform: skewX(-18deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+.btn-primary:hover::before {
+  left: 150%;
+}
+
+/* Secondary button + contact pill: subtle lift */
+.btn-secondary:hover,
+.contact-pill:hover {
+  transform: translateY(-1px);
+}
+
+/* Filter chips hover (class added to existing buttons) */
+.filter-chip:hover {
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  transform: translateY(-1px);
+}
+
+/* Project cards (section 05): lift + banner zoom */
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px -26px rgba(0, 0, 0, 0.9);
+}
+.media-box img {
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.project-card:hover .media-box img,
+.article-card:hover .media-box img {
+  transform: scale(1.05);
+}
+
+/* Generic soft hover for inline-styled panels (AI path, delivery path,
+   research/cert cards, hero stat rows) */
+.soft-hover {
+  transition: border-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease, background 0.3s ease;
+}
+.soft-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px -28px rgba(0, 0, 0, 0.85);
+}
+
+/* Timeline card lift */
+.timeline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -26px rgba(0, 0, 0, 0.85);
+}
+
+/* ---- Scroll reveal (progressive enhancement) ----
+   Hidden state applies only when JS confirms support via the
+   `reveal-ready` class on <html>; without JS everything is visible. */
+html.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+}
+html.reveal-ready [data-reveal].in-view,
+html.reveal-fallback [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Show more / less ---- */
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+  color: #e6eaf0;
+  font-family: var(--font-figtree), sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.show-more-btn:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.26);
+  transform: translateY(-1px);
+}
+.show-more-btn .chev {
+  display: inline-block;
+  font-size: 12px;
+  transition: transform 0.25s ease;
+}
+.show-more-btn[aria-expanded='true'] .chev {
+  transform: rotate(180deg);
+}
+
+/* Collapsible region (grid-rows trick for smooth height animation) */
+.collapsible {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    opacity 0.32s ease;
+}
+.collapsible.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.collapsible > .collapsible-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Respect reduced-motion for every enhancement above */
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-ready [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .grad-text {
+    animation: none;
+  }
+  .collapsible {
+    transition: opacity 0.2s ease;
+  }
+  .btn-primary::before {
+    display: none;
+  }
+}

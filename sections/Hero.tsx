@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import { sections } from '@/data/content';
 import { ButtonLink } from '@/components/Button';
+import { ShowMore } from '@/components/ShowMore';
 
 const { heroPillars, heroStats } = sections;
 
@@ -126,18 +127,25 @@ export function Hero() {
           engineering, distributed caching, Kubernetes, CI/CD, performance
           optimization, and production troubleshooting.
         </p>
-        <p style={heroPara}>
-          I’m an AWS Certified Solutions Architect – Associate with hands-on
-          experience in cloud environments and a strong interest in cloud-native
-          architecture. My computer science research focused on deep learning
-          and knowledge distillation for CNN-based head pose estimation, and I’m
-          now extending that foundation through personal projects and continuous
-          learning in Generative AI, RAG, vector search, and Agentic AI systems.
-        </p>
-        <p style={{ ...heroPara, marginBottom: '32px' }}>
-          I’m particularly interested in building reliable backend and cloud
-          foundations for the next generation of AI-powered applications.
-        </p>
+        <ShowMore
+          moreLabel="Read more about me"
+          lessLabel="Show less"
+          wrapStyle={{ marginBottom: '32px' }}
+        >
+          <p style={heroPara}>
+            I’m an AWS Certified Solutions Architect – Associate with hands-on
+            experience in cloud environments and a strong interest in
+            cloud-native architecture. My computer science research focused on
+            deep learning and knowledge distillation for CNN-based head pose
+            estimation, and I’m now extending that foundation through personal
+            projects and continuous learning in Generative AI, RAG, vector
+            search, and Agentic AI systems.
+          </p>
+          <p style={{ ...heroPara, marginBottom: '14px' }}>
+            I’m particularly interested in building reliable backend and cloud
+            foundations for the next generation of AI-powered applications.
+          </p>
+        </ShowMore>
 
         <div
           style={{
